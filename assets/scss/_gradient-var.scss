@@ -1,0 +1,20 @@
+@use "variables";
+
+$gradient-primary-dark: linear-gradient(148deg, variables.$palette-primary-dark 0%, variables.$palette-primary-main 100%);
+$gradient-primary-light: linear-gradient(148deg, variables.$palette-primary-light 0%, variables.$palette-primary-main 100%);
+
+$gradient-secondary-dark: linear-gradient(148deg, variables.$palette-secondary-dark 0%, variables.$palette-secondary-main 100%);
+$gradient-secondary-light: linear-gradient(148deg, variables.$palette-secondary-light 0%, variables.$palette-secondary-main 100%);
+
+$gradient-accent: linear-gradient(148deg, variables.$palette-accent-main 0%, variables.$palette-accent-light 100%);
+
+$gradient-double-light: linear-gradient(148deg, variables.$palette-secondary-light 0%, variables.$palette-primary-light 100%);
+$gradient-double-main: linear-gradient(148deg, variables.$palette-primary-main 0%, variables.$palette-secondary-main 100%);
+$gradient-double-dark: linear-gradient(148deg, variables.$palette-secondary-dark 0%, variables.$palette-primary-dark 100%);
+$gradient-double-primary: linear-gradient(148deg, variables.$palette-accent-main -20%, variables.$palette-primary-main 80%);
+$gradient-double-secondary: linear-gradient(148deg, variables.$palette-secondary-main 0%, variables.$palette-primary-main 100%);
+$gradient-double-accent: linear-gradient(148deg, variables.$palette-accent-main 0%, variables.$palette-secondary-main 100%);
+
+$gradient-triple-light: linear-gradient(148deg, variables.$palette-secondary-light 0%, variables.$palette-primary-light 50%, variables.$palette-accent-light 100%);
+$gradient-triple-main: linear-gradient(148deg, variables.$palette-primary-main 0%, variables.$palette-secondary-main 50%, variables.$palette-accent-main 100%);
+$gradient-triple-dark: linear-gradient(148deg, variables.$palette-primary-dark 0%, variables.$palette-secondary-dark 46%, variables.$palette-accent-dark 100%);

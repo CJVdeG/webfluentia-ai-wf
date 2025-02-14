@@ -1,0 +1,299 @@
+@use "gradient-var";
+@use "media-queries";
+@use "variables";
+
+@mixin title-style {
+  font-size: 48px;
+  line-height: 62px;
+  text-Transform: 'capitalize';
+  font-weight: 700;
+  margin-bottom: 40px;
+  position: relative
+}
+
+.use-text {
+  &-title {
+    font-weight: variables.$font-bold;
+    font-size: 48px;
+    line-height: 72px;
+    @include media-queries.breakpoints-down(md) {
+      font-size: 38px;
+      line-height: 60px;
+    }
+    @include media-queries.breakpoints-down(sm) {
+      font-size: 28px;
+      line-height: 44px;
+    }
+  }
+  &-title2 {
+    font-size: 36px;
+    line-height: 56px;
+    font-weight: variables.$font-bold;
+    @include media-queries.breakpoints-down(md) {
+      font-size: 32px;
+      line-height: 48px;
+    }
+    @include media-queries.breakpoints-down(sm) {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+  &-subtitle {
+    font-weight: variables.$font-medium;
+    font-size: 28px;
+    line-height: 44px;
+    @include media-queries.breakpoints-down(md) {
+      font-size: 24px;
+      line-height: 36px;
+    }
+    @include media-queries.breakpoints-down(sm) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+  &-subtitle2 {
+    font-weight: variables.$font-regular;
+    font-size: 22px;
+    line-height: 32px;
+    @include media-queries.breakpoints-down(md) {
+      font-size: 20px;
+      line-height: 32px
+    }
+    @include media-queries.breakpoints-down(sm) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  &-paragraph {
+    font-weight: variables.$font-regular;
+    font-size: 16px;
+    line-height: 24px
+  }
+  &-caption {
+    font-weight: variables.$font-regular;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  &-medium {
+    font-weight: variables.$font-medium
+  }
+  &-bold {
+    font-weight: variables.$font-bold
+  }
+  &-title-primary {
+    @include title-style;
+    .v-theme--dark & {
+      color: variables.$palette-primary-light
+    }
+    .v-theme--light & {
+      color: variables.$palette-primary-dark
+    }
+  }
+  &-title-secondary {
+    @include title-style;
+    .v-theme--dark & {
+      color: variables.$palette-secondary-light
+    }
+    .v-theme--light & {
+      color: variables.$palette-secondary-dark
+    }
+  }
+  &-primary {
+    .v-theme--dark & {
+      color: variables.$palette-primary-light
+    }
+    .v-theme--light & {
+      color: variables.$palette-primary-dark
+    }
+  }
+  &-secondary {
+    .v-theme--dark & {
+      color: variables.$palette-secondary-light
+    }
+    .v-theme--light & {
+      color: variables.$palette-secondary-dark
+    }
+  }
+  &-primary-color {
+    color: variables.$palette-primary-main
+  }
+  &-secondary-color {
+    color: variables.$palette-secondary-main
+  }
+  &-accent-color {
+    color: variables.$palette-accent-main
+  }
+}
+
+.use-text-grd {
+  &-primary-dark {
+    background: gradient-var.$gradient-primary-dark;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-primary-light {
+    background: gradient-var.$gradient-primary-light;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-secondary-dark {
+    background: gradient-var.$gradient-secondary-dark;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-secondary-light {
+    background: gradient-var.$gradient-secondary-light;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-accent {
+    background: gradient-var.$gradient-accent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-double-light {
+    background: gradient-var.$gradient-double-light;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-double-main {
+    background: gradient-var.$gradient-double-main;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-double-dark {
+    background: gradient-var.$gradient-double-dark;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-triple-light {
+    background: gradient-var.$gradient-triple-light;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-triple-main {
+    background: gradient-var.$gradient-triple-main;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-triple-dark {
+    background: gradient-var.$gradient-triple-dark;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-success {
+    background-image: linear-gradient(153deg, #84FF95 0%, #006064 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-error {
+    background-image: linear-gradient(153deg, #FFBABA 0%, #FF0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-pending {
+    background-image: linear-gradient(153deg, #FFEA84 0%, #FF9000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-disabled {
+    background-image: linear-gradient(153deg, #FFEA84 0%, #FF9000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.use-bg {
+  &-primary-main {
+    background-color: variables.$palette-primary-main;
+    color: #FFF
+  }
+  &-primary-light {
+    background-color: variables.$palette-primary-light;
+    color: variables.$palette-primary-dark
+  }
+  &-primary-dark {
+    background-color: variables.$palette-primary-dark;
+    color: #FFF;
+  }
+  &-secondary-main {
+    background-color: variables.$palette-secondary-main;
+    color: #FFF;
+  }
+  &-secondary-light {
+    background-color: variables.$palette-secondary-light;
+    color: variables.$palette-secondary-dark;
+  }
+  &-secondary-dark {
+    background-color: variables.$palette-secondary-dark;
+    color: #FFF;
+  }
+  &-accent-main {
+    background-color: variables.$palette-accent-main;
+    color: #FFF;
+  }
+  &-accent-light {
+    background-color: variables.$palette-accent-light;
+    color: variables.$palette-accent-dark,
+  }
+  &-accent-dark {
+    background-color: variables.$palette-accent-dark;
+    color: #FFF;
+  }
+  &-accent2-main {
+    background-color: #00BCD4;
+    color: #FFF;
+  }
+  &-accent2-light {
+    background-color: #B2EBF2;
+    color: #006064
+  }
+  &-accent2-dark {
+    background-color: #00838F;
+    color: #FFF
+  }
+}
+
+.use-hidden {
+  &-lg-down {
+    @include media-queries.breakpoints-down(lg) {
+      display: none;
+    }
+  }
+  &-md-down {
+    @include media-queries.breakpoints-down(md) {
+      display: none;
+    }
+  }
+  &-sm-down {
+    @include media-queries.breakpoints-down(sm) {
+      display: none;
+    }
+  }
+  &-xs-down {
+    @include media-queries.breakpoints-down(sm) {
+      display: none;
+    }
+  }
+  &-lg-up {
+    @include media-queries.breakpoints-up(lg) {
+      display: none;
+    }
+  }
+  &-md-up {
+    @include media-queries.breakpoints-up(md) {
+      display: none;
+    }
+  }
+  &-sm-up {
+    @include media-queries.breakpoints-up(sm) {
+      display: none;
+    }
+  }
+}
+
+.use-rtl-flip {
+  .v-locale--is-rtl & {
+    transform: scale(-1)
+  }
+}
